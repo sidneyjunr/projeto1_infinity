@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Router, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Menu } from "./components/Menu";
 import { MMORPG } from "./pages/MMORPG";
@@ -8,7 +8,7 @@ import { Page404 } from "./pages/Page404";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Menu/>  
       <Routes>
         <Route path="/" element= {<Home/>}/>
@@ -17,7 +17,7 @@ function App() {
         <Route path="moba" element= {<MOBA/>}/>
         <Route path="*" element= {<Page404/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
